@@ -1,0 +1,19 @@
+<div class="ss-sketch">
+  <div class="d-flex align-items-center mt-2">
+    <b>Sketch by:</b>
+    <div class="ss-sketch__user-info">
+      <img [src]="sketch?.owner.photoURL" alt="" />
+      <span>{{ sketch?.owner.displayName }}</span>
+    </div>
+  </div>
+  <div class="d-flex mt-2">
+    <b>Name: &nbsp; </b>
+    <span> {{ sketch?.name }} </span>
+  </div>
+  <div class="d-flex mt-2">
+    <b>Description: </b>
+    <span>{{ sketch?.description }}</span>
+  </div>
+
+  <img [src]="sketch?.imageURL" alt="" class="ss-sketch__sketch-image" />
+</div>

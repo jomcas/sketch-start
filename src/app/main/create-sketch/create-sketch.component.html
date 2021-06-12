@@ -1,0 +1,72 @@
+<div class="ss-create-sketch">
+  <div class="form-group col-md-6">
+    <label for="">Name</label>
+    <input type="text" class="form-control" name="name" [(ngModel)]="name" />
+  </div>
+
+  <div class="form-group mt-2 col-md-8">
+    <label for="">Description</label>
+    <textarea
+      class="form-control"
+      cols="30"
+      rows="4"
+      name="description"
+      [(ngModel)]="description"
+    ></textarea>
+  </div>
+
+  <div class="ss-create-sketch__paint-container">
+    <div class="ss-create-sketch__paint-header">
+      <img
+        src="https://onecompileman.com/sketch-online/assets/icons/color.png"
+      />
+
+      <div
+        *ngFor="let color of colors"
+        class="ss-create-sketch__color-block ss-create-sketch__color-block--{{
+          color
+        }}"
+        (click)="activeColor = color"
+        [class.ss-create-sketch__color-block--active]="activeColor === color"
+      ></div>
+
+      <img
+        src="https://onecompileman.com/sketch-online/assets/icons/pen.png"
+        alt=""
+        class="ml-5"
+      />
+      <div
+        *ngFor="let size of sizes"
+        class="ss-create-sketch__point-block ss-create-sketch__point-block--{{
+          size
+        }}"
+        (click)="activeSize = size"
+        [class.ss-create-sketch__point-block--active]="activeSize === size"
+      >
+        •
+      </div>
+
+      <img
+        src="https://onecompileman.com/sketch-online/assets/icons/reset.png"
+        (click)="reset()"
+        alt=""
+      />
+    </div>
+
+    <div id="canvasContainer"></div>
+  </div>
+
+  <button
+    (click)="createSketch()"
+    class="btn btn-primary ss-create-sketch__create-btn"
+  >
+    <img
+      src="https://onecompileman.com/sketch-online/assets/icons/edit.png"
+      alt=""
+    />
+    <div *ngIf="isCreating" class="spinner-border" role="status">
+      <!-- <span class="sr-only">Loading...</span> -->
+    </div>
+    CREATE SKETCH
+  </button>
+</div>

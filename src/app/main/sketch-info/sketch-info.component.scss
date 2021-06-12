@@ -1,0 +1,39 @@
+.ss-sketch {
+
+  padding: 25px;
+
+  &__user-info {
+
+    margin-left: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    img {
+
+      border-radius: 100%;
+
+      height: 42px;
+
+      margin-right: 10px;
+
+    }
+
+  }
+
+
+
+  &__sketch-image {
+
+    width: 100%;
+
+    height: auto;
+
+    box-shadow: 7px 7px 0 black;
+
+    margin-top: 20px;
+
+  }
+
+}

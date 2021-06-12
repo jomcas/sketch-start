@@ -1,0 +1,111 @@
+.ss-sketch-list {
+
+  padding: 20px;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+
+
+  &__sketch-item {
+
+    width: 400px;
+
+    height: 200px;
+
+    background-color: white;
+
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/stephenvinuya.appspot.com/o/sketches%2F052pxhbiztdb?alt=media&token=6330d5ab-3c71-443e-a490-1f20e6dad58f");
+
+    background-size: cover;
+
+    background-position: center;
+
+    box-shadow: 5px 5px 0 black;
+
+    margin: 20px;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+  }
+
+
+
+  &__sketch-item-footer {
+
+    background-color: #f25588;
+
+    height: 32px;
+
+    color: white;
+
+    font-size: 24px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+
+  }
+
+
+
+  &__back-btn {
+
+    background-color: #f4f5f8;
+
+    box-shadow: 4px 4px 0 black;
+
+    border-radius: 0;
+
+    width: 200px;
+
+    color: black;
+
+    margin-top: 30px;
+
+    border-color: transparent;
+
+    margin-left: 25px;
+
+  }
+
+
+
+  &__create-btn {
+
+    background-color: #eb445a;
+
+    box-shadow: 4px 4px 0 black;
+
+    border-radius: 0;
+
+    width: 200px;
+
+    height: 40px;
+
+    margin-top: 30px;
+
+    margin-left: 20px;
+
+    border-color: transparent;
+
+
+
+    img {
+
+      height: 30px;
+
+    }
+
+  }
+
+}

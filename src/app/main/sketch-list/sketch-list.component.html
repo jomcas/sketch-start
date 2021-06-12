@@ -1,0 +1,16 @@
+<div class="ss-sketch-list">
+  <div
+    class="ss-sketch-list__sketch-item"
+    *ngFor="let s of sketches"
+    [ngStyle]="{ backgroundImage: 'url(' + s.imageURL + ')' }"
+  >
+    <a
+      [routerLink]="['/main/sketch', s.id]"
+      class="ss-sketch-list__sketch-item-footer"
+    >
+      <span>
+        {{ s.name }} by <b>{{ s.owner.displayName }}</b>
+      </span>
+    </a>
+  </div>
+</div>
